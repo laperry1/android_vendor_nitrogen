@@ -52,8 +52,14 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
 # Latin IME lib - gesture typing
+ifeq ($(TARGET_ARCH),arm64)
+PRODUCT_COPY_FILES += \
+    vendor/nitrogen/prebuilt/common/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinimegoogle.so \
+    vendor/nitrogen/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
+else
 PRODUCT_COPY_FILES += \
     vendor/nitrogen/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
+endif
 
 # APN
 PRODUCT_COPY_FILES += \
@@ -93,7 +99,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/nitrogen/prebuilt/common/bin/sysinit:system/bin/sysinit \
     vendor/nitrogen/prebuilt/common/init.d/00banner:system/etc/init.d/00banner \
-    vendor/nitrogen/prebuilt/common/init.d/init.d.rc:root/init.d.rc
+    vendor/nitrogen/prebuilt/common/init.d/init.d.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.d.rc
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
