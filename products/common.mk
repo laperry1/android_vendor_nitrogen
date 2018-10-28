@@ -67,6 +67,19 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/nitrogen/prebuilt/common/etc/calibration_cad.xml:system/etc/calibration_cad.xml
 
+#Magisk zip
+PRODUCT_COPY_FILES += \
+    vendor/nitrogen/prebuilt/common/magisk.zip:system/addon.d/magisk.zip
+
+#LMT
+PRODUCT_COPY_FILES += \
+    vendor/nitrogen/prebuilt/common/app/LMT_v2.9.apk:system/priv-app/LMT/LMT_v2.9.apk \
+ 	vendor/nitrogen/prebuilt/common/app/libTouchServiceNative.so:system/lib64/libTouchServiceNative.so
+
+#ADAWAY
+PRODUCT_COPY_FILES += \
+    vendor/nitrogen/prebuilt/common/app/AdAway.apk:system/priv-app/AdAway/AdAway.apk
+
 # Extra packages
 PRODUCT_PACKAGES += \
     Launcher3 \
