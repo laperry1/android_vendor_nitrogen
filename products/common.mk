@@ -94,6 +94,7 @@ PRODUCT_PACKAGES += \
     messaging \
     OmniRecord \
     Stk \
+    SubstratumSignature \
     Terminal \
     WeatherClient
 
