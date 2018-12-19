@@ -121,3 +121,6 @@ PRODUCT_COPY_FILES += \
 
 # Boot animations
 $(call inherit-product-if-exists, vendor/nitrogen/products/bootanimation.mk)
+
+# Nitrogen OTA
+$(call inherit-product-if-exists, vendor/nitrogen/products/ota.mk)
